@@ -45,10 +45,6 @@ follow the instructions to login from the command line
 
 </Accordion>
 
-<p></p>
-<p></p>
-<p></p>
-<p></p>
 
 ### Links
 
@@ -95,7 +91,7 @@ The Developer Tools Dashboard makes it easy for you to navigate to the tools, in
   - **Repository name**: Enter a valid name for you repo , github will help with showing a green tick if it is valid (See warning above)
 
   - **Description**: Describe your app
-    ![Template](template.png)
+    ![Template](images/template.png)
   - Press **Create repository from template**
 
 
@@ -127,9 +123,6 @@ The new repository will be created in your selected organization.
 
 Most developers like to run the code natively in local development environment. To do so, follow the instructions listed in the **README.md** file to run the code locally. You may be required to install a specific runtime like **Java**, **Node**, or **Python**.
 
-<p></p>
-<p></p>
-<p></p>
 
 ### Register the App in a DevOps Pipeline
 
@@ -142,26 +135,27 @@ You can use the [IGC CLI](/getting-started/cli) to assist helping register a pip
 <InlineNotification kind="warning">
 
   **Warning:** If you are working on a shared education cluster, please deploy your app into a unique project/namespace and continue to do this for all other app creation steps. This will isolate your pipelines into its own namespace/project from other developers working on the same cluster.
-  -----
-
-  If working on **OpenShift** create your project namespace first
-  ```bash
-  oc new-project dev-{initials}
-  ```
-  Do not run `igc pipeline` without a namespace , this will cause your pipeline to be created in the default `dev` namespace:
-  ```bash
-  igc pipeline
-  ```
-  Instead, include the namespace parameter:
-  ```bash
-  igc pipeline -n dev-{your initials}
-  ```
-  For example:
-  ```bash
-  igc pipeline -n dev-mjp
-  ```
-
+  
 </InlineNotification>
+  
+
+  - If working on **OpenShift** create your project namespace first
+      ```bash
+      oc new-project dev-{initials}
+      ```
+  - Do not run `igc pipeline` without a namespace , this will cause your
+   pipeline to be created in the default `dev` namespace:
+      ```bash
+      igc pipeline
+      ```
+  - Instead, include the namespace parameter:
+      ```bash
+      igc pipeline -n dev-{your initials}
+      ```
+  - For example:
+      ```bash
+      igc pipeline -n dev-mjp
+      ```
 
 - Register your repo using the `igc pipeline` command. The CLI will ask for your github userid, it can be found in your github settings. It will ask for you enter your **Github Personal Access Token** and finally your branch.
     - **Username**: Enter your GitHub user id
@@ -190,7 +184,7 @@ To view you registered pipeline, follow the steps for the type of development cl
 
 - Open the OpenShift Web Console from the Developer Cluster instance
 
-![OpenShift](openshiftconsole.png)
+![OpenShift](images/openshiftconsole.png)
 
 - From the top menu, switch to the **Application Console**
 - Select _dev_ project/namespace or you personal namespace that was used on the creation
@@ -198,7 +192,7 @@ To view you registered pipeline, follow the steps for the type of development cl
 
 You will see your application dev ops pipeline now starting to build and once completed will look like the image below.
 
-![OpenShift](ospipeline.png)
+![OpenShift](images/ospipeline.png)
 
 </Tab>
 <Tab label="Kubernetes">
@@ -210,14 +204,10 @@ You will see your application dev ops pipeline now starting to build and once co
 
 Wait for the pipeline stages to start building. Once the stages have completed, you will see a view similar to the one below.
 
-![Jenkins Pipeline](pipeline.png)
+![Jenkins Pipeline](images/pipeline.png)
 
 </Tab>
 </Tabs>
-
-<p></p>
-<p></p>
-<p></p>
 
 ### Access running app
 
@@ -263,7 +253,7 @@ Once the pipeline has completed successfully, the app will be deployed into the 
 - You can see the running state of your application
 - Navigate around the console to understand where your deployment, service and pods are running
 
-![Pods on OpenShift](podsos.png)
+![Pods on OpenShift](images/podsos.png)
 
 </Tab>
 
@@ -280,7 +270,7 @@ Once the pipeline has completed successfully, the app will be deployed into the 
 - You can see the running state of your application
 - Navigate around the console to understand where your deployment, service and pods are running
 
-![Pods on IKS](podsiks.png)
+![Pods on IKS](images/podsiks.png)
 
 </Tab>
 </Tabs>
